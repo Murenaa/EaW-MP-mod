@@ -2721,7 +2721,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = RIV_the_federation
 
-	cost = 10
+	cost = 4.3
 
 	ai_will_do = {
 		factor = 1
@@ -2824,7 +2824,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = RIV_the_federation
 
-	cost = 10
+	cost = 4.3
 
 	ai_will_do = {
 		factor = 1
@@ -2948,7 +2948,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = RIV_the_federation
 
-	cost = 10
+	cost = 4.3
 
 	ai_will_do = {
 		factor = 1
