@@ -1,4 +1,4 @@
-version="1.10.1"
+version="1.10.*"
 tags={
 	"Balance"
 }
@@ -6,5 +6,7 @@ name="EaW MP mod"
 dependencies={
 	"Equestria at War"
 }
-supported_version="1.10.2"
-path="C:/Users/Murena/Documents/Paradox Interactive/Hearts of Iron IV/mod/EaW-MP-mod"
+picture="Pobeda.png"
+supported_version="1.10.*"
+path="mod/EaW-MP-mod"
+remote_file_id="2294008615"

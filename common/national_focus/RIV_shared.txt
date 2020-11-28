@@ -2706,7 +2706,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = RIV_atomic_energy_community
 			bonus = 1.0
-			uses = 2
+			uses = 3
 			category = nuclear
 		}
 	}
@@ -2766,13 +2766,13 @@ shared_focus = {
 	will_lead_to_war_with = BAR
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RIV_pacify_the_south"
+		BAR = { add_to_ROOT_potential_cores = yes }
+		ZES = { add_to_ROOT_potential_cores = yes }
+		OLV = { add_to_ROOT_potential_cores = yes }
 		if = {
 			limit = {
 				BAR = {
 					exists = yes
-					NOT = {
-						has_government = democratic
-					}
 					NOT = {
 						is_in_faction_with = ROOT
 					}
@@ -2788,9 +2788,6 @@ shared_focus = {
 				ZES = {
 					exists = yes
 					NOT = {
-						has_government = democratic
-					}
-					NOT = {
 						is_in_faction_with = ROOT
 					}
 				}
@@ -2804,9 +2801,6 @@ shared_focus = {
 			limit = {
 				OLV = {
 					exists = yes
-					NOT = {
-						has_government = democratic
-					}
 					NOT = {
 						is_in_faction_with = ROOT
 					}
@@ -2845,28 +2839,24 @@ shared_focus = {
 			FBK = {
 				NOT = {
 					has_government = democratic
-					has_government = communism
 					is_in_faction_with = ROOT
 				}
 			}
 			FIR = {
 				NOT = {
 					has_government = democratic
-					has_government = communism
 					is_in_faction_with = ROOT
 				}
 			}
 			WAT = {
 				NOT = {
 					has_government = democratic
-					has_government = communism
 					is_in_faction_with = ROOT
 				}
 			}
 			NCH = {
 				NOT = {
 					has_government = democratic
-					has_government = communism
 					is_in_faction_with = ROOT
 				}
 			}
@@ -2887,16 +2877,14 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RIV_pacify_the_north"
+		FBK = { add_to_ROOT_potential_cores = yes }
+		FIR = { add_to_ROOT_potential_cores = yes }
+		WAT = { add_to_ROOT_potential_cores = yes }
+		NCH = { add_to_ROOT_potential_cores = yes }
 		if = {
 			limit = {
 				FBK = {
 					exists = yes
-					NOT = {
-						has_government = democratic
-					}
-					NOT = {
-						has_government = communism
-					}
 					NOT = {
 						is_in_faction_with = ROOT
 					}
@@ -2912,12 +2900,6 @@ shared_focus = {
 				FIR = {
 					exists = yes
 					NOT = {
-						has_government = democratic
-					}
-					NOT = {
-						has_government = communism
-					}
-					NOT = {
 						is_in_faction_with = ROOT
 					}
 				}
@@ -2931,12 +2913,6 @@ shared_focus = {
 			limit = {
 				WAT = {
 					exists = yes
-					NOT = {
-						has_government = democratic
-					}
-					NOT = {
-						has_government = communism
-					}
 					NOT = {
 						is_in_faction_with = ROOT
 					}
@@ -2952,12 +2928,6 @@ shared_focus = {
 				NCH = {
 					exists = yes
 					NOT = {
-						has_government = democratic
-					}
-					NOT = {
-						has_government = communism
-					}
-					NOT = {
 						is_in_faction_with = ROOT
 					}
 				}
@@ -2970,7 +2940,204 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
+shared_focus = {
+	id = RIV_pacify_the_center
+	icon = GFX_goal_riv_economic_community
+	prerequisite = { focus = RIV_the_federation }
+	x = -4
+	y = 1
+	relative_position_id = RIV_the_federation
 
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		if = {
+			limit = { tag = NIM }
+			has_completed_focus = NIM_integration
+		}
+		OR = {
+			NIM = {
+				NOT = {
+					NIM = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			BAK = {
+				NOT = {
+					BAK = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			DMT = {
+				NOT = {
+					DMT = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			RIV = {
+				NOT = {
+					RIV = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			DEP = {
+				NOT = {
+					DEP = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			LCT = {
+				NOT = {
+					LCT = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			FRE = {
+				NOT = {
+					FRE = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+			WIT = {
+				NOT = {
+					WIT = { exists = no }
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		NOT = {
+			has_country_flag = blocked_coalition_focuses_flag
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	will_lead_to_war_with = NIM
+	will_lead_to_war_with = BAK
+	will_lead_to_war_with = DMT
+	will_lead_to_war_with = RIV
+	will_lead_to_war_with = DEP
+	will_lead_to_war_with = LCT
+	will_lead_to_war_with = FRE
+	will_lead_to_war_with = WIT
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus RIV_pacify_the_south"
+		NIM = { add_to_ROOT_potential_cores = yes }
+		BAK = { add_to_ROOT_potential_cores = yes }
+		DMT = { add_to_ROOT_potential_cores = yes }
+		RIV = { add_to_ROOT_potential_cores = yes }
+		DEP = { add_to_ROOT_potential_cores = yes }
+		LCT = { add_to_ROOT_potential_cores = yes }
+		FRE = { add_to_ROOT_potential_cores = yes }
+		WIT = { add_to_ROOT_potential_cores = yes }
+		if = {
+			limit = {
+				NIM = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NIM
+			}
+		}
+		if = {
+			limit = {
+				BAK = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAK
+			}
+		}
+		if = {
+			limit = {
+				DMT = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DMT
+			}
+		}
+		if = {
+			limit = {
+				RIV = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = RIV
+			}
+		}
+		if = {
+			limit = {
+				LCT = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LCT
+			}
+		}
+		if = {
+			limit = {
+				FRE = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+		}
+
+	}
+	if = {
+			limit = {
+				WIT = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WIT
+			}
+		}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
 #####################################
 #####	Expand the Federation	#####
 #####################################
