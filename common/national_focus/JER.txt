@@ -3344,7 +3344,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 28
 		y = 12
-		cost = 6.00
+		cost = 20
 		prerequisite = { focus = JER_outer_states }
 		available = {
 			has_government = democratic

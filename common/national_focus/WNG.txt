@@ -801,9 +801,7 @@ focus_tree = {
 			focus = WNG_divide_new_mareland
 			focus = WNG_free_the_bulls
 		}
-		available = {
-			has_global_flag = GRI_empire_rising_flag
-		}
+		
 		bypass = {
 			OR = {
 				event_target:griffonian_empire = { has_government = communism }
