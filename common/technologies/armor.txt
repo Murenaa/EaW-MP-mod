@@ -1624,7 +1624,7 @@ allow = {
 		research_cost = 2.5
 		start_year = 1012
         allow = {
-			date > 1011.1.1 
+			date > 1010.6.1 
 		}
 		folder = {
 			name = armour_folder
