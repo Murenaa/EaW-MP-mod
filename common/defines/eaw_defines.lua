@@ -100,3 +100,8 @@ NDefines.NMilitary.UNIT_EXP_LEVELS = {0.02,	0.04,	0.06,	0.08,	0.1,	0.14,	0.18,	0
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
 -- NDefines.NAir.AIR_WING_XP_LEVELS = { 20, 40, 60, 80, 100, 140, 180, 220, 260, 300, 380, 460, 640, 620, 700, 740, 780, 820, 860, 900 }
+-----------------------------------------------------------------------------------------------------------------------------------------
+	NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
+	NDefines.NGame.LAG_DAYS_FOR_PAUSE = 144
+	NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 15
+	NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 36
