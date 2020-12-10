@@ -6,7 +6,7 @@ name="EaW MP mod"
 dependencies={
 	"Equestria at War"
 }
-picture="Pobeda.jpg"
+picture="pobeda.jpg"
 supported_version="1.10.*"
 path="mod/EaW-MP-mod"
 remote_file_id="2294008615"
